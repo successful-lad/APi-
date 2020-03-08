@@ -6,7 +6,11 @@ import { posts } from 'schemas';
 
 export default ({ redditName }) => requestAsync({
   url: endpoints.getRedditUrl({ redditName }),
-  transform: response => normalize(response.data.children, posts.schemasArray).entities,
+  transform: (response) => {
+    // console.log(response.data.children);
+    console.log(normalize(response.data.children, posts.schemasArray).entities);
+    return normalize(response.data.children, posts.schemasArray).entities;
+  },
   transformResult: response => ({
     posts: normalize(response.data.children, posts.schemasArray).result,
   }),

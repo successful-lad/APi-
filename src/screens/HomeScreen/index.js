@@ -7,7 +7,6 @@ import styles from './style.module.scss';
 const HomeScreen = () => {
   const { redditPosts, getReddit, redditIsFetching } = useReddit();
   const getReactReddit = () => getReddit({ redditName: 'reactjs' });
-
   useEffect(() => {
     getReactReddit();
   }, []);
@@ -19,6 +18,7 @@ const HomeScreen = () => {
   const buttonStyle = {
     maxWidth: 100,
   };
+  // console.log(getReactReddit());
 
   return (
     <div className={styles.homeScreen}>

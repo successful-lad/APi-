@@ -1,0 +1,86 @@
+.simpleTodoList {
+  position: relative;
+  width: 600px;
+  min-height: 300px;
+  border-radius: 30px;
+  border: 1px solid black;
+  padding: 40px;
+  background: gray;
+
+  &__row {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    margin: 10px 0;
+    background: aliceblue;
+    font-size: 24px;
+    border-radius: 10px;
+
+    &__task {
+      display: flex;
+      justify-content: space-between;
+      color: black;
+      min-width: 400px;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      width: 100px;
+      height: 40px;
+      align-self: center;
+
+      button {
+        margin: 5px 10px;
+        color: white;
+        font-size: 16px;
+        padding: 5px 10px;
+        align-self: center;
+        border: 1px solid white;
+        background: #077780;
+        border-radius: 10px;
+        opacity: 0.6;
+        transition: 0.5s ease-in;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__addTodo {
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    align-items: center;
+    width: 90%;
+
+    input {
+      height: 30px;
+      padding-left: 10px;
+    }
+    //
+    //button {
+    //  margin: 5px 10px;
+    //  color: white;
+    //  font-size: 16px;
+    //  padding: 5px 10px;
+    //  align-self: center;
+    //  border: 1px solid white;
+    //  background: #077780;
+    //  border-radius: 10px;
+    //  opacity: 0.6;
+    //  transition: 0.5s ease-in;
+    //  cursor: pointer;
+    //
+    //  &:hover {
+    //    opacity: 1;
+    //  }
+    //}
+  }
+}
